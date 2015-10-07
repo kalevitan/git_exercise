@@ -7,7 +7,7 @@ Create a new file and name it date_examples_YOURNAME.php.
 Complete each question, commit your new file and push up to the repo.
 
 ----
-Write a PHP script which will display the copyright information in the following format. To get current year you can use date() function.
+Write a PHP script which will display the copyright information in the following format. To get current year you can use `date()` function.
 
 
       Expected Format : © 2013 PHP Exercises - w3resource
@@ -17,7 +17,7 @@ Create a simple 'birthday countdown' script, the script will count the number of
 
 ----
 
-Write a PHP script to print the current date in the following format. To get current date's information you can use date() function.
+Write a PHP script to print the current date in the following format. To get current date's information you can use `date()` function.
 Sample format : (assume current date is September 01, 2013)
 
 
@@ -35,7 +35,7 @@ Sample date : 2012-09-12
 Write a PHP script to get the first and last day of a month from a specified date.
 
 ----
-Write a PHP script to calculate the current age of a person. You must use the DateTime object.
+Write a PHP script to calculate the current age of a person. You must use the `DateTime()` object.
 Sample date of birth : 11.4.1987
 
     Output : Your age : 27 years, 1 month, 29 days

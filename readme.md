@@ -33,3 +33,9 @@ Sample date : 2012-09-12
 
 ----
 Write a PHP script to get the first and last day of a month from a specified date.
+
+----
+Write a PHP script to calculate the current age of a person. You must use the DateTime object.
+Sample date of birth : 11.4.1987
+
+    Output : Your age : 27 years, 1 month, 29 days

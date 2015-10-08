@@ -13,11 +13,11 @@ Write a PHP script which will display the copyright information in the following
       Expected Format : © 2013 PHP Exercises - w3resource
 
 ----
-Create a simple 'birthday countdown' script, the script will count the number of days between current day and birth day.
+Create a simple 'birthday countdown' script. The script will count the number of days between current day and birth day.
 
 ----
 
-Write a PHP script to print the current date in the following format. To get current date's information you can use `date()` function.
+Write a PHP script to print the current date in the following formats. To get current date's information you can use `date()` function.
 Sample format : (assume current date is September 01, 2013)
 
 
@@ -26,8 +26,7 @@ Sample format : (assume current date is September 01, 2013)
     01-09-13
 
 ----
-Write a PHP script to convert a date from yyyy-mm-dd to dd-mm-yyyy. Go to the editor
-Sample date : 2012-09-12
+Write a PHP script to convert a date from yyyy-mm-dd to dd-mm-yyyy. Sample date : 2012-09-12
 
     Expected Result : 12-09-2012
 
@@ -35,7 +34,6 @@ Sample date : 2012-09-12
 Write a PHP script to get the first and last day of a month from a specified date.
 
 ----
-Write a PHP script to calculate the current age of a person. You must use the `DateTime()` object.
-Sample date of birth : 11.4.1987
+Write a PHP script to calculate the current age of a person. You must use the `DateTime()` object. Sample date of birth : 11.4.1987
 
     Output : Your age : 27 years, 1 month, 29 days

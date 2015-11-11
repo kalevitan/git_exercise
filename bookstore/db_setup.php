@@ -1,8 +1,8 @@
 <?php
 
-$query = 'CREATE DATABASE publications;';
+require_once('db.php');
 
-$query .= "GRANT ALL ON publications.* TO 'jim'@'localhost'
+$query = "GRANT ALL ON publications.* TO 'jim'@'localhost'
 IDENTIFIED BY 'pa55word';";
 
 $query .= 'USE publications;';

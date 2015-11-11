@@ -4,16 +4,16 @@ require_once("db.php");
 // Fetch all the rows.
 $query = 'SELECT * FROM classics';
 
-$statement = $db->query($query);
-// $statement->execute();
+$statement = $db->prepare($query);
+$statement->execute();
 $books = $statement->fetchAll();
 $statement->closeCursor();
 
 // Fetch the table names.
 $query = 'DESCRIBE classics';
 
-$statement = $db->query($query);
-// $statement->execute();
+$statement = $db->prepare($query);
+$statement->execute();
 $column_names = $statement->fetchAll();
 $statement->closeCursor();
 

@@ -1,0 +1,25 @@
+body {
+  width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  padding-top: 20px;
+  font-size: 4em;
+  font-family: helvetica;
+  color: #777;
+  font-weight: 300;
+}
+
+p.error {
+  color: white;
+  font-weight: 600;
+  width: 500px;
+  margin: 0 auto;
+  background-color: red;
+  padding: 30px;
+}
+
+td {
+  padding: 5px;
+}

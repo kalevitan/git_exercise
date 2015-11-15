@@ -15,6 +15,7 @@ $query = 'DESCRIBE classics';
 $statement = $db->prepare($query);
 $statement->execute();
 $column_names = $statement->fetchAll();
+array_shift($column_names);
 $statement->closeCursor();
 
 // Define new book.

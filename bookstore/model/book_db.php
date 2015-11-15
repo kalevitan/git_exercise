@@ -24,6 +24,8 @@ function get_classic_column_names() {
   // Store all column names in column_names array.
   $column_names = $statement->fetchAll();
   $statement->closeCursor();
+  // Leave out the first column, bookID.
+  array_shift($column_names);
   // Return column names array.
   return $column_names;
 }
@@ -49,7 +51,7 @@ function add_book($author, $type, $title, $year) {
     $statement->closeCursor();
     // echo 'The book has been created.';
   } else {
-    echo "The valuse have not been set!";
+    echo "Error: The Book could not be added!";
   }
 
 }
@@ -58,11 +60,15 @@ function add_book($author, $type, $title, $year) {
 function delete_book($Book_author) {
   global $db;
   // Delete the Jack Kerouac book(s).
-  $query = "DELETE FROM classics
-            WHERE author = :author";
+  if (isset($Book_author)) {
+    $query = "DELETE FROM classics
+              WHERE author = :author";
 
-  $statement = $db->prepare($query);
-  $statement->bindValue(':author', $Book_author);
-  $statement->execute();
-  $statement->closeCursor();
+    $statement = $db->prepare($query);
+    $statement->bindValue(':author', $Book_author);
+    $statement->execute();
+    $statement->closeCursor();
+  } else {
+    echo "Error: The book could not be deleted!";
+  }
 }

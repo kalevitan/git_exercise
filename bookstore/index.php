@@ -15,11 +15,11 @@ if ($action == 'book_list') {
   $column_names = get_classic_column_names();
   include('inventory/book_list.php');
 } else if ($action == 'add_book') {
-  add_book($author,$type,$title,$year);
-  // add_book("Jack Kerouac","Fiction","On the Road","1957");
+  // add_book($author,$type,$title,$year);
+  add_book("Jack Kerouac","Fiction","On the Road","1957");
   header('Location: .');
 } else if ($action == 'delete_book') {
-  delete_book(null);
+  delete_book("Jack Kerouac");
   header('Location: .');
 } else {
   exit;

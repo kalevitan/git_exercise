@@ -15,11 +15,30 @@ if ($action == 'book_list') {
   $column_names = get_classic_column_names();
   include('inventory/book_list.php');
 } else if ($action == 'add_book') {
-  // add_book($author,$type,$title,$year);
-  add_book("Jack Kerouac","Fiction","On the Road","1957");
+  include('inventory/add_book.php');
+} else if ($action == 'add_book_db') {
+  $author = filter_input(INPUT_POST, 'author');
+  $title = filter_input(INPUT_POST, 'title');
+  $type = filter_input(INPUT_POST, 'type');
+  $year = filter_input(INPUT_POST, 'year', FILTER_VALIDATE_INT);
+  add_book($author, $type, $title, $year);
+  header('Location: .');
+} else if ($action == 'edit_book') {
+  $bookID = filter_input(INPUT_POST, 'bookID', FILTER_VALIDATE_INT);
+  $book = edit_book($bookID);
+  include('inventory/add_book.php');
+} else if ($action == 'update_book') {
+  $bookID = filter_input(INPUT_GET, 'bookID', FILTER_VALIDATE_INT);
+  $author = filter_input(INPUT_POST, 'author');
+  $title = filter_input(INPUT_POST, 'title');
+  $type = filter_input(INPUT_POST, 'type');
+  $year = filter_input(INPUT_POST, 'year', FILTER_VALIDATE_INT);
+  update_book($bookID, $author, $type, $title, $year);
+  var_dump($bookID, $author, $type, $title, $year);
   header('Location: .');
 } else if ($action == 'delete_book') {
-  delete_book("Jack Kerouac");
+  $bookID = filter_input(INPUT_POST, 'bookID', FILTER_VALIDATE_INT);
+  delete_book($bookID);
   header('Location: .');
 } else {
   exit;
